@@ -136,5 +136,5 @@ git branch
 ls
 git checkout main
 ls
-
+git push --set-upstream origin feature02
 ```
