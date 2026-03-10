@@ -14,4 +14,8 @@ https://git-scm.com/install/windows
 - WSL
 https://docs.docker.com/desktop/setup/install/windows-install/
 
+- MM
+https://chat.whatsapp.com/Hv2c77nLIw16t8X4oPF15k
+
+
 
