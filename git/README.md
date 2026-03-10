@@ -62,3 +62,56 @@ git diff --cached
 git status
 ```
 
+
+### Git Branches
+- **Git branch** to see list of your branches
+- **Git branch \<name of new br>** creates a new branch
+- **Git checkout \<name of new br>** - command switches ​to the specified branch​
+- **Git branch -m \<old br> \<new br>** to rename branch
+- **Git branch -d \<name of new br>** to delete branch
+- **Git branch -r** view remote branches
+- **Git branch -a** view local and remote branches
+- **Git branch --all** view all branches
+
+## Let's start with visualizing mode before Git bash exercises
+- Open the URL via the browser http://git-school.github.io/visualizing-git
+
+```
+git branch feature1​
+git commit​
+git commit​
+git log​
+git checkout feature1​
+git commit​
+git commit​
+git checkout <SHA1>​
+git tag release1​
+git commit​
+git commit​
+git checkout release1​
+git checkout -b feature2​
+git commit​
+git commit​
+git checkout HEAD~3​
+git branch​
+git branch -d feature1​
+git branch​
+```
+### Open the cli of Git Bash and do the below commands
+```
+git branch --all
+git branch -r
+git branch
+git branch feature02
+git branch
+git checkout feature02                 #git checkout -b feature02        #you can create and switch by flag -b
+git branch
+git branch -m feature02 feature03
+git branch
+git checkout main
+git branch
+git branch -d feature03            # you can use -D flag for force delete
+git branch
+git branch --all
+git checkout remotes/origin/bugfix-01              # switch to remote br
+```
