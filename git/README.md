@@ -115,3 +115,26 @@ git branch
 git branch --all
 git checkout remotes/origin/bugfix-01              # switch to remote br
 ```
+
+
+#### Additinal commands
+
+```
+git branch --all
+git branch
+git branch
+git branch --all
+git branch -r
+git branch feature02
+git branch
+git checkout feature02
+git branch
+vi br02.txt
+git add .
+git commit -m "new br"
+git branch
+ls
+git checkout main
+ls
+
+```
