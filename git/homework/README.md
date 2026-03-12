@@ -1,5 +1,5 @@
 # Practice Branches - workfolw via visualizing-git 
-## Make sure you are not lossing the head
+## Make sure you are not losing the head
 **Git losing the head** refers to the "detached HEAD" state,
 a normal (though less common) Git state where your HEAD pointer points directly
 to a specific commit rather than a branch name.
