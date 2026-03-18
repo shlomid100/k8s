@@ -1,4 +1,4 @@
-# TBD
+# Change the Dinner Suggestion to New Menu with new tag and expose port
 1. based on lab-04, change the title **Dinner Suggestion** to **New Menu Dinner Suggestion**
 2. Docker run with new port 5001
 3. Set a new tag inmage 1.01
