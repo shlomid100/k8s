@@ -25,4 +25,10 @@ docker images
 docker push dinghy123/http_error:fix1010
 ```
 
+## Additionl commands
+
+```
+docker rm -f $(docker ps -a -q)
+docker rmi -f $(docker images -q)
+```
 
