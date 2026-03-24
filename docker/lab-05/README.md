@@ -18,7 +18,7 @@ docker exec -it http_error bash
 docker commit aef7717dea84 http_error:fix1010
 docker ps
 docker images | grep -i http
-docker run --name http_error -d -p 8900:80 5872ce97baad
+docker run --name http_error_new -d -p 8900:80 5872ce97baad
 docker ps
 docker tag 5872ce97baad dinghy123/http_error:fix1010
 docker images
