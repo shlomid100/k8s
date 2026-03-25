@@ -1,4 +1,4 @@
-# Hands-On – Bonus mysql db Basic Commands​
+1. # Hands-On – Bonus mysql db Basic Commands​
 - Docker pull mysql​
 - Docker run with port 3406​
 - List of all images​
@@ -6,13 +6,13 @@
 - Go to Cli of mysql and show all database
 - select * from user 
 
-# Based on Hands-On– Lab-03 Dockerfile simple app Hello world
+2. # Based on Hands-On– Lab-03 Dockerfile simple app Hello world
 - Go into Docker container and change the app
 - Save the images with 1.0 tag
 - Create TAR file from new iamge tag
 
 
-# Bonus Hands-On - Docker Argument port
+3. # Bonus Hands-On - Docker Argument port
 - See the bash file arg-example.sh 
 - Based on Dockerfile
   - Create a html page file with title **Docker Argument port**
