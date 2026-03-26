@@ -22,6 +22,10 @@ https://chat.whatsapp.com/Hv2c77nLIw16t8X4oPF15k
 https://campus.gov.il/course/cs-gov-cs-reshatot101/
 - How Router working ?
 https://www.youtube.com/watch?v=ggqQg4VDc2c
+- NAT
+  - https://www.youtube.com/watch?v=7Y5YCyeaq3w&t=47s
+  - https://www.youtube.com/watch?v=zHBIV7TFdaY
+  - https://www.youtube.com/watch?v=EGYmbicrUTY
 
 
 
