@@ -28,3 +28,6 @@
 http://localhost:5023
 http://localhost:5024
 ```
+
+- Run the docker top, stats, inspect commands
+- Copy the index.html file from docker container to your host, one dir back
