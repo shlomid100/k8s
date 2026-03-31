@@ -1,5 +1,5 @@
 #!/bin/bash
-pwd
+ls -ltra
 if [ $? -eq 0 ]
 then
         echo "Successfully pwd"
