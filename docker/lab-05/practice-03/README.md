@@ -31,3 +31,34 @@ http://localhost:5024
 
 - Run the docker top, stats, inspect commands
 - Copy the index.html file from docker container to your host, one dir back
+
+
+## Solution: Hands-On - Docker Argument port
+```
+echo "<h1>Docker Argument port</h1>" > index.html
+```
+
+
+```
+docker build -t html-server .
+docker run -d   --name web5023   -e PORT=5023   -p 5023:5023   html-server
+docker ps
+docker run -d   --name web5024   -e PORT=5024   -p 5024:5024   html-server
+docker ps
+```
+
+
+```
+docker top 4740efe3ae05
+docker stats 4740efe3ae05
+docker inspect 4740efe3ae05
+docker logs --follow 4740efe3ae05
+docker logs 4740efe3ae05 | less
+docker exec -it 4740efe3ae05 sh
+  # Edit the index.html via vi to Docker Argument port new
+docker cp 4740efe3ae05:/app/index.html ../lab-01/
+cat ../lab-01/index.html
+rm -Rf ../lab-01/index.html
+
+```
+
