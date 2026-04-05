@@ -1,6 +1,13 @@
 # Ansible installation based on Docker
+## Highlight steps:
+- docker run ansible-slave
+- Set it correctly
+- docker run ansible-master
+- Set it correctly
+- Create inventory configuration file
 
-## Test via ansible ping
+
+### Test via ansible ping
 ```
 ansible -m ping all
 ```
