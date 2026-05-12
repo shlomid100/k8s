@@ -1,13 +1,11 @@
 # 🧪 Practice 1 — Tasks Only
 
 
-**No commands are provided — figure them out yourself.**
-
 ---
 
 ## Tasks
 
-1. Set your namespace as the default for the current context so you don't have to type `-n <your-namespace>` every time.
+1. List all namespaces.
 
 2. List all pods in your namespace.
 
