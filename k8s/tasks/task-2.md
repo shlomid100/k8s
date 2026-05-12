@@ -28,9 +28,9 @@
 
 9. Roll the `dev` deployment **back** to the previous image.
 
-10. Open a shell inside one of the `test` pods. Create a file called `/tmp/hello.txt` with any content. Exit the shell.
+10. BONUS: Open a shell inside one of the `test` pods. Create a file called `/tmp/hello.txt` with any content. Exit the shell.
 
-11. Delete that same pod. After it gets replaced, open a shell in the new pod and check whether `/tmp/hello.txt` exists.
+11. BONUS: Delete that same pod. After it gets replaced, open a shell in the new pod and check whether `/tmp/hello.txt` exists.
     Write down the answer: **does the file exist? Why or why not?**
 
 12. Show the most recent **events** in the `dev` namespace, sorted by time.
