@@ -1,7 +1,7 @@
-# 🧪 Practice 2 — Explore, Scale, and Break Your Deployment
+# 🧪 Practice 1 — Explore, Scale, and Break Your Deployment
 
-**Time:** ~10 minutes
-**Prerequisites:** You completed Practice 1 — you have a namespace and a running Deployment.
+
+
 **Goal:** Get comfortable inspecting pods, scaling a Deployment, and seeing self-healing with your own eyes.
 
 > 📌 Throughout this exercise, replace `<your-namespace>` with the namespace you created in Practice 1. Or, save typing by running this once:
