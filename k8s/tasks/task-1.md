@@ -1,131 +1,45 @@
-# 🧪 Practice 1 — Explore, Scale, and Break Your Deployment
+# 🧪 Practice 1 — Tasks Only
 
 
-
-**Goal:** Get comfortable inspecting pods, scaling a Deployment, and seeing self-healing with your own eyes.
-
-> 📌 Throughout this exercise, replace `<your-namespace>` with the namespace you created in Practice 1. Or, save typing by running this once:
->
-> ```bash
-> kubectl config set-context --current --namespace=<your-namespace>
-> ```
->
-> After that, every `kubectl` command runs against your namespace automatically.
+**No commands are provided — figure them out yourself.**
 
 ---
 
-## Step 1 — See what's running
+## Tasks
 
-```bash
-kubectl get pods
-```
+1. Set your namespace as the default for the current context so you don't have to type `-n <your-namespace>` every time.
 
-**Expected output:**
+2. List all pods in your namespace.
 
-```
-NAME                            READY   STATUS    RESTARTS   AGE
-nginx-deployment-7d9c8b-abc12   1/1     Running   0          2m
-nginx-deployment-7d9c8b-def34   1/1     Running   0          2m
-nginx-deployment-7d9c8b-ghi56   1/1     Running   0          2m
-```
+3. Pick one pod. Show its **full details and recent events**.
 
-✅ You should see **3 pods**. Each one is a copy of the same container.
+4. Read the **logs** of that same pod.
 
-❓ *Question to think about:* Why do all the pod names start with the same prefix?
+5. Find out which **node** that pod is running on.
 
----
+6. Scale the nginx deployment up to **5 replicas**.
 
-## Step 2 — Look closer at one pod
+7. Verify that 5 pods are running.
 
-Copy any pod name from the list above, then:
+8. Delete one of the pods on purpose.
 
-```bash
-kubectl describe pod <paste-pod-name-here>
-```
+9. List the pods again immediately. Confirm there are still 5 pods, and identify which one is the **new** pod.
+   Write down the answer: **how can you tell which pod is the new one?**
 
-Scroll down to the **`Events:`** section at the bottom. You'll see lines like `Pulled image`, `Created container`, `Started container`.
+10. Scale the deployment back down to **1 replica**.
 
-> 💡 **Remember this.** The Events section at the bottom of `describe` is where Kubernetes tells you the story of what happened. It's the first place you look when something's broken.
+11. Verify only 1 pod remains.
+
+12. Open a shell inside the running pod.
+
+13. From inside the pod, make a request to nginx on port 80.
+
+14. Exit the pod's shell.
 
 ---
 
-## Step 3 — Read the application logs
+## ✅ Done when
 
-```bash
-kubectl logs <paste-pod-name-here>
-```
-
-You'll see nginx's startup messages — proof that the container actually started.
-
----
-
-## Step 4 — Scale up to 5 copies
-
-```bash
-kubectl scale deployment nginx-deployment --replicas=5
-```
-
-Then check immediately:
-
-```bash
-kubectl get pods
-```
-
-✅ You should now see **5 pods**. Two of them might still be `ContainerCreating` for a few seconds — run the command again and watch them flip to `Running`.
-
----
-
-## Step 5 — The magic moment: kill a pod 💥
-
-Pick any pod from the list and delete it on purpose:
-
-```bash
-kubectl delete pod <paste-any-pod-name>
-```
-
-**Immediately** run:
-
-```bash
-kubectl get pods
-```
-
-✅ You'll still see **5 pods** — but one of them is brand new (look at the `AGE` column — one says `5s` while the others say `2m`).
-
-🎯 **This is the whole point of a Deployment.** You declared "I want 5." You killed one. Kubernetes noticed and made a new one. You didn't have to do anything.
-
----
-
-## Step 6 — Scale back down
-
-```bash
-kubectl scale deployment nginx-deployment --replicas=1
-kubectl get pods
-```
-
-✅ Within a few seconds, only **1 pod** remains. The other 4 were terminated automatically.
-
----
-
-## ✅ You're done if you can answer:
-
-1. What command shows you the **list** of pods?
-2. What command shows you the **details and events** of one pod?
-3. What happens when you delete a pod that belongs to a Deployment?
-4. What command **changes** the number of replicas without editing the YAML?
-
----
-
-## 🌟 Bonus (for fast finishers)
-
-Try this and observe carefully:
-
-```bash
-# Get a shell INSIDE one of the running containers
-kubectl exec -it <pod-name> -- sh
-
-# Once inside, try:
-curl localhost:80
-exit
-```
-
-You just talked to nginx from inside its own pod. Next session we'll learn how to talk to it from **outside** the cluster — that's what a Service is for.
+- Your namespace is set as the default context.
+- The deployment is back to 1 replica.
+- You can explain in one sentence what happened when you deleted a pod in task 8.
