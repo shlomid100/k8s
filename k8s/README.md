@@ -1,3 +1,6 @@
+/c/Users/Shlomo/Documents/devops-course-SV/k8s/svc/k8s/first-pod.yaml
+/c/Users/Shlomo/Documents/Shlomo/Work/0Curses/Kubernetes Docker Container Pods/vprofile-project/kubedefs/first-pod.yaml
+
 # kubectl — Beginner Cheat Sheet
 
 A reference for the most commonly used `kubectl` commands, scoped to what a beginner needs in their first few Kubernetes sessions. Anything beyond this list is not required at this stage.
