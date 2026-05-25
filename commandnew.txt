@@ -1,0 +1,80 @@
+kubectl get nodes
+kubectl config get-contexts
+kubectl get all
+kubectl create ns shlomi
+kubectl get ns
+kubectl apply -f first-pod.yaml -n shlomi
+kubectl get pods
+kubectl get nodes -n shlomi
+kubectl get pods -n shlomi
+kubectl get ns
+kubectl describe pod nginx-deployment-7ccccd94f7-tj77m -n shlomi
+kubectl describe pod nginx-deployment-5cbd5f9494-s4knf -n dev | grep -A 10 "Optional"
+kubectl logs nginx-deployment-7ccccd94f7-tj77m -n shlomi
+kubectl describe pod nginx-deployment-7ccccd94f7-tj77m -n shlomi | grep "node"
+kubectl delete -f first-pod.yaml -n shlomi
+kubectl get pods -n shlomi
+kubectl apply -f first-pod.yaml -n shlomi
+kubectl get pods -n shlomi
+kubectl delete pod nginx-deployment-7ccccd94f7-8n8zd -n shlomi
+kubectl get pods -n shlomi
+kubectl apply -f first-pod.yaml -n shlomi
+kubectl get pods -n shlomi
+kubectl exec -it nginx-deployment-7ccccd94f7-vj2pj -n shlomi -- bash
+kubectl create ns dev
+kubectl create ns test
+kubectl create ns prod
+kubectl apply -f first-pod.yaml -n dev
+kubectl apply -f first-pod.yaml -n test
+kubectl apply -f first-pod.yaml -n prod
+kubectl get pods -n dev
+kubectl get pods -n test
+kubectl get pods -n prod
+kubectl scale deployment nginx-deployment --replicas=2 -n dev
+kubectl get pods -n prod
+kubectl get pods -n test
+kubectl get pods -n dev
+kubectl scale deployment nginx-deployment --replicas=3 -n test
+kubectl scale deployment nginx-deployment --replicas=5 -n prod
+kubectl get pods -n dev
+kubectl get pods -n test
+kubectl get pods -n prod
+kubectl get pods -A
+kubectl describe pod nginx-deployment-7ccccd94f7-6ssdj -n dev
+kubectl scale deployment nginx-deployment --replicas=1 -n prod
+kubectl get pods -n prod
+kubectl set image deployment/nginx-deployment nginx=nginx:1.26 -n dev
+kubectl rollout status deployment/nginx-deployment -n dev
+kubectl get pods -n prod
+kubectl exec -it nginx-deployment-7ccccd94f7-rtmp8 -n prod -- sh
+kubectl exec -it nginx-deployment-7ccccd94f7-rtmp8 -n prod -- bash
+kubectl rollout status deployment/nginx-deployment -n dev
+kubectl get pods -n dev
+kubectl describe pod nginx-deployment-5cbd5f9494-g2nrz -n dev
+kubectl rollout status deployment/nginx-deployment -n dev
+kubectl get deployment nginx-deployment -n dev -o wide
+kubectl get pods -n dev
+kubectl describe pod nginx-deployment-7b47b45bf9-kt59j -n dev
+kubectl set image deployment/nginx-deployment nginx=nginx:1.26 -n dev
+kubectl rollout status deployment/nginx-deployment -n dev
+kubectl get pods -n dev
+kubectl delete pod nginx-deployment-5cbd5f9494-j7t6f -n dev
+kubectl get pods -n dev
+kubectl describe pod nginx-deployment-5cbd5f9494-lfnfx -n dev
+kubectl rollout restart deployment/nginx-deployment -n dev
+kubectl get pods -n dev
+kubectl get deployment nginx-deployment -n dev
+kubectl describe pod nginx-deployment-5cbd5f9494-lfnfx -n dev
+kubectl get pods -n dev
+kubectl describe pod nginx-deployment-7b47b45bf9-kt59j -n dev
+kubectl get deployment nginx-deployment -n dev -o yaml
+kubectl get pods
+kubectl get pods -n dev
+kubectl exec -it nginx-deployment-78779d7557-25m22 -n dev -- bash
+kubectl rollout undo deployment/nginx-deployment -n dev
+kubectl exec -it nginx-deployment-78779d7557-25m22 -n dev -- bash
+kubectl get pods -n dev
+kubectl exec -it nginx-deployment-5cbd5f9494-gnpk7 -n dev -- bash
+kubectl delete pod nginx-deployment-5cbd5f9494-gnpk7 -n dev
+kubectl get pods -n dev
+kubectl exec -it nginx-deployment-5cbd5f9494-s4knf -n dev -- bash
