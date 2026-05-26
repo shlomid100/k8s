@@ -1,12 +1,6 @@
-/c/Users/Shlomo/Documents/devops-course-SV/k8s/svc/k8s/first-pod.yaml
-/c/Users/Shlomo/Documents/Shlomo/Work/0Curses/Kubernetes Docker Container Pods/vprofile-project/kubedefs/first-pod.yaml
-
-# kubectl — Beginner Cheat Sheet
-
-A reference for the most commonly used `kubectl` commands, scoped to what a beginner needs in their first few Kubernetes sessions. Anything beyond this list is not required at this stage.
+/c/Users/Shlomo/Documents/devops-course-SV/k8s/svc/k8s/
 
 ## Mental Model
-
 `kubectl` is a client that talks to the Kubernetes API server. Every command is one of:
 
 - **Look at stuff** (read)
@@ -16,6 +10,8 @@ A reference for the most commonly used `kubectl` commands, scoped to what a begi
 - **Get into stuff** (exec / logs / port-forward)
 
 That's it. If you can place a command in one of those five buckets, you understand what it does.
+Kind Deployment is the "reciept" of the pods and it responsible that the pods are up in other hand kind of port know just to run container not manage anything
+
 
 ---
 
