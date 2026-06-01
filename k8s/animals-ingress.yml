@@ -161,7 +161,7 @@ spec:
                 port:
                   number: 80
 
-          - path: /snake
+          - path: /snakes
             pathType: Prefix
 
             backend:
