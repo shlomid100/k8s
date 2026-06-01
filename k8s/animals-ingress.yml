@@ -94,7 +94,7 @@ spec:
 
   selector:
     matchLabels:
-      app: dogs
+      app: snakes
 
   template:
     metadata:
