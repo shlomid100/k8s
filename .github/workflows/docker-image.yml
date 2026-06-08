@@ -25,10 +25,10 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: ./lesson-cicd/practice-04  # Path to the Dockerfile and build context
+          context: ./k8s/cicd/  # Path to the Dockerfile and build context
           push: true
           tags: |
-            #dinghy123/app-node:${{ github.sha }}
-            dinghy123/app-node:latest-09
+            #shlomid100/app-node:${{ github.sha }}
+            shlomid100/app-node:latest-09
       - name: Logout from Docker Hub
         run: docker logout
