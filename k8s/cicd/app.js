@@ -1,4 +1,3 @@
-
 // app.js
 const http = require('http');
 
@@ -8,7 +7,7 @@ const port = 3000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Lets build the infrastructure of Jenkins and GitOps 0806 \n');
+  res.end('my first ci\n');
 });
 
 server.listen(port, hostname, () => {
