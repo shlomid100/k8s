@@ -29,6 +29,5 @@ jobs:
           push: true
           tags: |
             shlomid100/k8s:${{ github.sha }}
-            shlomid100/k8s:latest-09
       - name: Logout from Docker Hub
         run: docker logout
