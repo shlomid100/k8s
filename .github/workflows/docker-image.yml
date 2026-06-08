@@ -3,7 +3,7 @@ name: Docker Build and Push
 on:
   push:
     branches:
-      - dev-01  # Replace with your branch name
+      - main  # Replace with your branch name
 
 jobs:
   build-and-push:
