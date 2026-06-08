@@ -28,6 +28,6 @@ jobs:
           context: ./k8s/cicd/  # Path to the Dockerfile and build context
           push: true
           tags: |
-            shlomid100/k8s:${{ github.sha }}
+            shlomid100/k8s:v${{ github.run_number }}
       - name: Logout from Docker Hub
         run: docker logout
